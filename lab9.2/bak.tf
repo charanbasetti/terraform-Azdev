@@ -35,7 +35,7 @@ module "web-vm" {
   location   = azurerm_resource_group.be-rg.location
   subnet_id  = module.be-vnet.vnet_subnets[0]
   admin_user = var.admin_username
-  admin_pass = data.azurerm_key_vault_secret.sec01.value
+  admin_pass = var.admin_password
 }
 #Su
 resource "azurerm_network_security_rule" "be-rg" {

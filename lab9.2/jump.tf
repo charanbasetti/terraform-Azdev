@@ -15,7 +15,7 @@ module "jbox-vm" {
   location   = azurerm_resource_group.jbox-rg.location
   subnet_id  = module.fe-vnet.vnet_subnets[1]
   admin_user = var.admin_username
-  admin_pass = data.azurerm_key_vault_secret.sec01.value
+  admin_pass = var.admin_password
 }
 resource "azurerm_network_security_rule" "jbox-rg" {
   name                        = "rdp"
