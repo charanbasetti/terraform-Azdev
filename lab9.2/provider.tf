@@ -7,6 +7,7 @@ terraform {
   }
 }
 
+# Configure the Microsoft Azure Provider
 provider "az" {
   features {}
 }
